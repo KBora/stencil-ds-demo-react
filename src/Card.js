@@ -4,7 +4,14 @@ const Card = (props) => {
   const elementRef = useRef(null);
 
   useEffect( () => {
+    // assign non scalar props
     elementRef.current.cardTags = props.cardTags;
+
+    // listen for custom events
+    elementRef.current.addEventListener('tagClick', $event => {
+      props.tagClick($event);
+    });
+
   }, [props]);
 
   // Web component

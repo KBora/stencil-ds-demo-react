@@ -5,6 +5,10 @@ import Card from './Card';
 function App() {
   const tags = ["fluffy", "rex", "chiko", "ming"];
 
+  function handleTagClick($event) {
+    console.log('handleTagClick in App.js: ', $event)
+  }
+
   return (
     <div>
       <twds-card
@@ -20,6 +24,7 @@ function App() {
         cardTitle="Random image title"
         cardText="Random image description"
         cardTags={tags}
+        tagClick={handleTagClick}
       >
       </Card>
 
