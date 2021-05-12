@@ -1,14 +1,15 @@
 import React, { useRef, useEffect } from "react";
 
-const Hexagram = ({ lines }) => {
+const Hexagram = (props) => {
   const elementRef = useRef(null);
 
   useEffect( () => {
-    elementRef.current.lines = lines;
-  }, [lines]);
+    debugger;
+    elementRef.current.lines = props.lines;
+  }, [props]);
 
   // Web component
-  return <twds-hexagram ref={elementRef}></twds-hexagram>
+  return <twds-hexagram ref={elementRef}>{props.children}</twds-hexagram>
 };
 
 export default Hexagram;

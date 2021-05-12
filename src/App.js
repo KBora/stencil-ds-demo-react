@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <twds-hexagram lines="111111"></twds-hexagram>
 
-      <Hexagram lines="010101"></Hexagram>
+      <Hexagram lines="010101">hello</Hexagram>
 
     </div>
   );
