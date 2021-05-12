@@ -4,7 +4,6 @@ const Hexagram = (props) => {
   const elementRef = useRef(null);
 
   useEffect( () => {
-    debugger;
     elementRef.current.lines = props.lines;
   }, [props]);
 
