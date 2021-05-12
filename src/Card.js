@@ -4,7 +4,7 @@ const Card = (props) => {
   const elementRef = useRef(null);
 
   useEffect( () => {
-    elementRef.current.tags = props.tags;
+    elementRef.current.cardTags = props.cardTags;
   }, [props]);
 
   // Web component
